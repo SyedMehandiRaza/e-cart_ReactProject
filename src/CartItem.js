@@ -1,16 +1,14 @@
 import React from 'react';
 
-class CartItem extends React.Component {
-  render () {
+const CartItem = (props) => {
     // console.log('this.props', this.props);
-    const { price, title, qty } = this.props.product;
+    const { price, title, qty } = props.product;
     const { product, 
       onIncreaseQuantity, 
       onDecreaseQuantity, 
-      onDeleteProduct } = this.props;
+      onDeleteProduct } = props;
     return (
       <div className="cart-item">
-        {this.props.jsx}
         <div className="left-block">
           <img style={styles.image} />
         </div>
@@ -43,7 +41,6 @@ class CartItem extends React.Component {
       </div>
     );
   }
-}
 
 const styles = {
   image: {
